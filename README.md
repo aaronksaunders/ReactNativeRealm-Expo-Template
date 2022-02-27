@@ -6,6 +6,9 @@
   <img alt="Supports Expo Android" longdesc="Supports Expo Android" src="https://img.shields.io/badge/Android-4630EB.svg?style=flat-square&logo=ANDROID&labelColor=A4C639&logoColor=fff" />
 </p>
 
+## Video Link
+- https://www.youtube.com/watch?v=5BwIpiC2H4E
+
 Simple Expo application to quickly get started with Realm, based on the starter template that is provided by Realm
 
 ## 📝 Application Notes
