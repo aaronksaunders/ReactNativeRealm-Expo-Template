@@ -13,6 +13,7 @@ function TaskList({tasks, onToggleTaskStatus, onDeleteTask}) {
           <TaskItem
             description={item.description}
             isComplete={item.isComplete}
+            project={item.project}
             onToggleStatus={() => onToggleTaskStatus(item)}
             onDelete={() => onDeleteTask(item)}
             // Don't spread the Realm item as such: {...item}

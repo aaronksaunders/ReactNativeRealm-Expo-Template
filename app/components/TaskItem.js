@@ -3,7 +3,8 @@ import {View, Text, Pressable, Platform, StyleSheet} from 'react-native';
 
 import colors from '../styles/colors';
 
-function TaskItem({description, isComplete, onToggleStatus, onDelete}) {
+function TaskItem({description, isComplete, onToggleStatus, onDelete, project}) {
+  console.log("Task Project - ",project)
   return (
     <View style={styles.task}>
       <Pressable
@@ -14,6 +15,9 @@ function TaskItem({description, isComplete, onToggleStatus, onDelete}) {
       <View style={styles.descriptionContainer}>
         <Text numberOfLines={1} style={styles.description}>
           {description}
+        </Text>
+        <Text numberOfLines={1} style={styles.project}>
+          {project[0]?.name}
         </Text>
       </View>
       <Pressable onPress={onDelete} style={styles.deleteButton}>
@@ -54,6 +58,11 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     color: colors.black,
     fontSize: 17,
+  },
+  project: {
+    paddingHorizontal: 10,
+    color: colors.black,
+    fontSize: 12,
   },
   status: {
     width: 50,

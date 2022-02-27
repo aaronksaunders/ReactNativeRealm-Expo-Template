@@ -10,31 +10,21 @@ import {
 
 import colors from "../styles/colors";
 
-function AddTaskForm({ onSubmit }) {
-  const [description, setDescription] = useState("");
-  const [project, setProject] = useState("");
+function AddProjectForm({ onSubmit }) {
+  const [name, setName] = useState("");
 
   const handleSubmit = () => {
-    onSubmit({description, project});
-    setDescription("");
-    setProject("");
+    onSubmit({name});
+    setName("");
   };
 
   return (
     <View style={styles.form}>
       <View style={{flexDirection : 'column', flex: 1}}>
         <TextInput
-          value={project}
-          placeholder="Enter Project"
-          onChangeText={setProject}
-          autoCorrect={false}
-          autoCapitalize="none"
-          style={styles.textInput}
-        />
-        <TextInput
-          value={description}
-          placeholder="Enter Task Description"
-          onChangeText={setDescription}
+          value={name}
+          placeholder="Enter Project Name"
+          onChangeText={setName}
           autoCorrect={false}
           autoCapitalize="none"
           style={styles.textInput}
@@ -92,4 +82,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default AddTaskForm;
+export default AddProjectForm;
